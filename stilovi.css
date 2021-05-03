@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+*{
+  margin: 0;
+}
+
+body{
+  background: #00BFFF;
+  font-family: 'Open Sans';
+}
+
+h1{
+  font-weight:600;
+  text-align: center;
+  padding-right: 15%;
+  margin-bottom: 2%;
+}
+
+.podaci{
+  background:  #ff99cc;
+  border: 0.05rem solid whitesmoke;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding:5% 5%;
+  margin:0 5% 5%;
+  color:white;
+
+}
+
+.odabir{
+  margin:5% 0;
+  text-align: center;
+}
+
+.kontejner{
+  background: white;
+  margin: 5% 15% 5%;
+  padding:2% 0;
+  border: 0.05rem solid lightgrey;
+  border-radius: 2rem;
+  box-shadow:1.5px 1.5px 0.1px 0.1px silver;
+  position: relative;
+}
+
+input{
+  padding: 0.5% 3%;
+  border-radius:2rem;
+  border:1px solid lightgrey;
+  font-family: 'Open Sans';
+}
+
+input:focus{
+  outline:none;
+}
+
+button{
+  padding: 0.5% 2%;
+  border-radius:2rem;
+  background-color: #ff71b8;
+  border:1px solid whitesmoke;
+  color:white;
+  font-family: 'Open Sans';
+  cursor: pointer;
+}
+
+button:hover{
+  background-color:#ff4bad;
+}
+
+p{
+  margin:0 1%;
+  text-align: center;
+}
+
+option{
+  padding: 0.5% 0 0.5% 0.5%;
+  background-color:#4d4d4d;
+  margin:0 38% 0 28.5%;
+  border: 1px solid lightgrey;
+  color: white;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+option:hover{
+  background-color:#191919;
+}
+
+.prazanDiv{
+  position: absolute;
+  width:100%;
+}
+
+.fa-search{
+  position:absolute;
+  left:29%;
+  bottom:60%;
+  color: lightgrey;
+}
+
+.fa-viruses{
+  color:#ff99cc;
+  margin-right: 1%;
+}
+
+.update{
+  position: fixed;
+  bottom: 0;
+  right:0;
+  left: 0;
+  text-align: center;
+  background-color:#4d4d4d;
+  padding: 0.5% 0;
+  color: white;
+}
+
+#update{
+  padding-left: 0.5%;
+}

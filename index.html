@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Covid 19 App</title>
+    <link rel="stylesheet" href="stilovi.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
+  </head>
+  <body>
+
+    <div class="kontejner">
+      <div class="odabir">
+        <h1><i class="fas fa-viruses fa-fw fa-3x"></i> Covid19 Tracker</h1>
+          <input class="input" placeholder="Choose country..." size=40>
+          <i class="fas fa-search"></i>
+        <button class='gumb'>Submit</button>
+        <div class="prazanDiv">
+
+        </div>
+      </div>
+      <div class="podaci">
+        <div >
+          <p class="drzava"></p>
+        </div>
+        <div >
+          <p class="ukupno-zarazeni"></p>
+          <p class="ukupno-ozdravjeli"></p>
+        </div>
+        <div >
+          <p class="cjepljeni"></p>
+          <p class="necjepljeni"></p>
+        </div>
+        <div>
+          <p class="umrli"></p>
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="update">Last update:<span id="update"></span></footer>
+
+
+      <script src="fetch.js" charset="utf-8"></script>
+      <script src="ui.js" charset="utf-8"></script>
+      <script src="index.js" charset="utf-8"></script>
+  </body>
+</html>
