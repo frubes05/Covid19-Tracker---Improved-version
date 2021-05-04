@@ -71,7 +71,11 @@ class UI{
 
   pokaziCjepivo(cjepivo){
     try{
-      this.zacjepiti.innerHTML=`Total vaccinated population:<br><div> ${cjepivo.All.people_vaccinated}</div>`;
+      if(isNaN(cjepivo.All.population-cjepivo.All.people_vaccinated)){
+        this.necjepljeni.innerHTML=`Total vaccinated population:<br><div>${'No information available'}</div>`;
+      }else{
+        this.necjepljeni.innerHTML=`Total unvaccinated population:<br> ${cjepivo.All.population-cjepivo.All.people_vaccinated}`;
+      }
     }
     catch(err){
       this.zacjepiti.innerHTML=`Total vaccinated population:<br><div>${'No information available'}</div>`;
