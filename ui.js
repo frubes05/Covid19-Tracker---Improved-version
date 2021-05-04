@@ -37,8 +37,12 @@ class UI{
       this.drzava.innerHTML=`Country:<br><div>${this.input.value}</div>`;
     }
     //this.drzava.innerHTML=`Country:<br><div class='ime'>${podatak.All.country}</div>`;
-    if(podatak.All.confirmed!=undefined || podatak.All.confirmed!=0 ){
-      this.zarazeni.innerHTML=`Total infected population:<br><div> ${podatak.All.confirmed}</div>`;
+    if(podatak.All.confirmed!=undefined){
+      if(podatak.All.confirmed==0){
+        this.zarazeni.innerHTML=`Total infected population:<br><div>No information available</div>`;
+      }else{
+        this.zarazeni.innerHTML=`Total infected population:<br><div> ${podatak.All.confirmed}</div>`;
+      }
     }else{
       this.zarazeni.innerHTML=`Total infected population:<br><div>No information available</div>`;
     }
@@ -46,9 +50,13 @@ class UI{
 
     //this.zarazeni.innerHTML=`Total infected population:<br> ${podatak.All.confirmed}`;
 
-    if(podatak.All.recovered!=undefined || podatak.All.recovered!=0){
-      this.ozdravjeli.innerHTML=`Total recovered population:<br><div> ${podatak.All.recovered}</div>`;
-    }else{
+    if(podatak.All.recovered!=undefined){
+      if(podatak.All.recovered==0){
+        this.ozdravjeli.innerHTML=`Total recovered population:<br><div>No information available</div>`;
+      }else{
+        this.ozdravjeli.innerHTML=`Total recovered population:<br><div> ${podatak.All.recovered}</div>`;
+      }
+     }else{
       this.ozdravjeli.innerHTML=`Total recovered population:<br><div>No information available</div>`;
     }
 
@@ -71,18 +79,22 @@ class UI{
 
   pokaziCjepivo(cjepivo){
     try{
-      if(isNaN(cjepivo.All.population-cjepivo.All.people_vaccinated)){
-        this.necjepljeni.innerHTML=`Total vaccinated population:<br><div>${'No information available'}</div>`;
+      if(cjepivo.All.people_vaccinated==0){
+        this.zacjepiti.innerHTML=`Total vaccinated population:<br><div>${'No information available'}</div>`;
       }else{
-        this.necjepljeni.innerHTML=`Total unvaccinated population:<br> ${cjepivo.All.population-cjepivo.All.people_vaccinated}`;
+        this.zacjepiti.innerHTML=`Total vaccinated population:<br><div> ${cjepivo.All.people_vaccinated}</div>`;
       }
     }
     catch(err){
       this.zacjepiti.innerHTML=`Total vaccinated population:<br><div>${'No information available'}</div>`;
     }
 
-    try{
-      this.necjepljeni.innerHTML=`Total unvaccinated population:<br> ${cjepivo.All.population-cjepivo.All.people_vaccinated}`;
+   try{
+      if(isNaN(cjepivo.All.population-cjepivo.All.people_vaccinated)){
+        this.necjepljeni.innerHTML=`Total vaccinated population:<br><div>${'No information available'}</div>`;
+      }else{
+        this.necjepljeni.innerHTML=`Total unvaccinated population:<br> ${cjepivo.All.population-cjepivo.All.people_vaccinated}`;
+      }
     }
     catch(error){
       this.necjepljeni.innerHTML=`Total vaccinated population:<br><div>${'No information available'}</div>`;
