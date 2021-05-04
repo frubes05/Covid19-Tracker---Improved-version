@@ -1,4 +1,4 @@
-# Covid19-Tracker---poboljsana-verzija
+# Covid19-Tracker---Improved version
 
 Deseta aplikacija koju sam napravio.
 
